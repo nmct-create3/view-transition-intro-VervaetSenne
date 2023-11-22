@@ -23,6 +23,10 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
 svg,
@@ -42,31 +46,80 @@ h1 {
 .list-reset {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 /* components */
 
-.nav__list {}
+.nav__list {
+    --gap: 1.5rem;
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(2, 20vw);
+    grid-template-rows: repeat(2, 20vh);
+}
 
-.nav__item {}
+.nav__item {
+    display: grid;
+}
 
-.nav__link {}
+.nav__link {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: .25rem;
+}
+
+.nav__link--one{
+    background-color: var(--color-ocean);
+}
+
+.nav__link--two{
+    background-color: var(--color-pink);
+}
+
+.nav__link--three{
+    background-color: var(--color-purple);
+}
+
+.nav__link--four{
+    background-color: var(--color-yellow);
+}
 
 /* give the links a different background color */
 
-.page {}
+.page {
+    color: white;
+    width: calc(100vw - 10vh);
+    height: calc(100vh - 10vh);
+    border-radius: 1rem;
+}
 
 /* give the pages a different background color */
 
-.page--one {}
+.page--one {
+    background-color: var(--color-ocean);
+    display: grid;
+    place-items: center;
+}
 
-.page--two {}
+.page--two {
+    background-color: var(--color-pink);
+}
 
-.page--three {}
+.page--three {
+    background-color: var(--color-purple);
+}
 
-.page--four {}
+.page--four {
+    background-color: var(--color-yellow);
+}
 
-.page__back {}
+.page__back {
+    color: white;
+}
 
 .page__body,
 .page__back {}
